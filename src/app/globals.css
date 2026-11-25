@@ -1,26 +1,32 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Palette taken from agrivi.com's stylesheet */
+@theme {
+  --color-brand: #5bad3f;
+  --color-brand-light: #84b752;
+  --color-brand-dark: #407934;
+  --color-brand-deeper: #2e5a25;
+  --color-brand-deepest: #1e5514;
+  --color-lime: #a8d85f;
+  --color-mint: #ebf5e3;
+  --color-mist: #f0f7ea;
+  --color-line: #e0e6d8;
+  --color-surface: #f8f9f5;
+  --color-ink: #17251a;
+  --color-muted: #5b6b5d;
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: var(--color-ink);
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
 }
